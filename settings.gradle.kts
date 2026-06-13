@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google {
             content {
@@ -24,3 +25,9 @@ dependencyResolutionManagement {
 
 rootProject.name = "Compose Starter Template"
 include(":app")
+include(":core:navigation")
+include(":core:ui")
+include(":features:home")
+include(":features:search")
+include(":features:profile")
+include(":features:detail")

@@ -1,19 +1,15 @@
 plugins {
-    alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.hilt)
-    alias(libs.plugins.ksp)
+    id("composestartertemplate.android.application")
+    id("composestartertemplate.android.compose")
+    id("composestartertemplate.android.hilt")
     alias(libs.plugins.jetbrains.kotlin.serialization)
 }
 
 android {
     namespace = "com.ramada.composestartertemplate"
-    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.ramada.composestartertemplate"
-        minSdk = 24
-        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -29,53 +25,42 @@ android {
             )
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
-    }
-    buildFeatures {
-        compose = true
-    }
 }
 
 dependencies {
-    implementation(platform(libs.androidx.compose.bom))
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.compose.material3)
-    implementation(libs.androidx.compose.material.icons.extended)
-    implementation(libs.androidx.compose.ui)
-    implementation(libs.androidx.compose.ui.graphics)
-    implementation(libs.androidx.compose.ui.tooling.preview)
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    testImplementation(libs.junit)
-    androidTestImplementation(platform(libs.androidx.compose.bom))
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
-    androidTestImplementation(libs.androidx.espresso.core)
-    androidTestImplementation(libs.androidx.junit)
-    debugImplementation(libs.androidx.compose.ui.test.manifest)
-    debugImplementation(libs.androidx.compose.ui.tooling)
+    implementation(project(":core:navigation"))
+    implementation(project(":core:ui"))
+    implementation(project(":features:home"))
+    implementation(project(":features:search"))
+    implementation(project(":features:profile"))
+    implementation(project(":features:detail"))
 
+    implementation(Libs.activityCompose)
+    implementation(Libs.composeMaterial3)
+    implementation(Libs.composeMaterialIconsExtended)
+    implementation(Libs.composeUi)
+    implementation(Libs.composeUiGraphics)
+    implementation(Libs.composeUiToolingPreview)
+    implementation(Libs.androidCoreKtx)
+    implementation(Libs.lifecycleRuntimeKtx)
+    
+    testImplementation(Libs.junit)
+    androidTestImplementation(Libs.androidxJunit)
+    androidTestImplementation(Libs.espressoCore)
+    
+    debugImplementation(Libs.composeUiTooling)
 
-//    HILT & Hilt Navigation
-    implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
-    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(Libs.hiltNavigationCompose)
 
-//    lifecycle compose
-    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(Libs.retrofit)
+    implementation(Libs.converterGson)
+    implementation(platform(Libs.okhttpBom))
+    implementation(Libs.okhttp)
+    implementation(Libs.loggingInterceptor)
 
-//    Retrofit & Networking
-    implementation(libs.retrofit)
-    implementation(libs.converter.gson)
-    implementation(platform(libs.okhttp.bom))
-    implementation(libs.okhttp)
-    implementation(libs.logging.interceptor)
-
-    // Navigation 3
-    implementation(libs.androidx.navigation3.runtime)
-    implementation(libs.androidx.navigation3.ui)
-    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
-    implementation(libs.androidx.material3.adaptive.navigation3)
-    implementation(libs.kotlinx.serialization.core)
+    implementation(Libs.nav3Runtime)
+    implementation(Libs.nav3Ui)
+    implementation(Libs.lifecycleViewmodelNav3)
+    implementation(Libs.material3AdaptiveNav3)
+    implementation(Libs.kotlinxSerializationCore)
 }

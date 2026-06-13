@@ -1,0 +1,16 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml:2:13-83
+INJECTED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml:2:13-83
+	package
+		INJECTED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml
+	xmlns:android
+		ADDED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml:2:23-81
+uses-sdk
+INJECTED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml reason: use-sdk injection requested
+INJECTED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml
+INJECTED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml
+	android:targetSdkVersion
+		INJECTED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml
+	android:minSdkVersion
+		INJECTED from /Users/mochammad.insan/Documents/development/android/ComposeStarterTemplate/features/home/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest15156998747593054477.xml
